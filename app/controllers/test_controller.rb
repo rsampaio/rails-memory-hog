@@ -6,8 +6,8 @@ class TestController < ApplicationController
   def start
     mem_start = `ps -o rss= -p #{Process.pid}`.to_i
     a = []
-    100000.times do
-      a << Object.new
+    4000000.times do
+      a << ''
     end
     mem_alloc = `ps -o rss= -p #{Process.pid}`.to_i
     a = nil
